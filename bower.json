@@ -16,7 +16,10 @@
     "bower_components",
     "../",
     "test",
-    "tests"
+    "tests",
+    ".gitignore",
+    "README.md",
+    "app.js"
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#0.5"
