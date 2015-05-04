@@ -1,6 +1,9 @@
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../core-icon/core-icon.html">
+<link rel="import" href="../core-icons/core-icons.html">
+<link rel="import" href="../core-icon-button/core-icon-button.html">
 
-<polymer-element name="tile-box" attributes="color width height borderColor image">
+<polymer-element name="tile-box" attributes="color width height borderColor image titleText titleColor">
     <template>
         <style>
             :host {
@@ -20,9 +23,9 @@
                 </div>
                 <div flex horizontal layout center style="background:#4e9ee7">
                     <div flex style="text-align: center">
-                        <span>test</span>
+                        <span style="color: {{titleColor}}">{{title}}</span>
                     </div>
-                    <!--<core-icon-button icon="forward" style="display: block" onclick="clickMe()"></core-icon-button>-->
+                    <core-icon-button icon="forward" style="display: block" onclick="clickMe()"></core-icon-button>
                 </div>
             </div>
         </div>
@@ -36,7 +39,9 @@
             width: 400,
             height: 200,
             borderColor: "#444444",
-            image: ""
+            image: "",
+            titleText: "",
+            titleColor: "black"
         });
     </script>
 </polymer-element>
