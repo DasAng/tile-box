@@ -1,0 +1,24 @@
+{
+  "name": "tile-box",
+  "version": "0.0.1",
+  "description": "Polymer component for tile-box",
+  "keywords": [
+    "Polymer"
+  ],
+  "authors": [
+    "DasAng"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/DasAng/tile-box",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "../",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#0.5"
+  }
+}

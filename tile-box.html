@@ -1,0 +1,42 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<polymer-element name="tile-box" attributes="color width height borderColor image">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+        </style>
+        <div vertical layout
+             style="background-color:{{color}};margin:5px;width:{{width}}px;height:{{height}}px;border: 3px solid {{borderColor}};">
+            <div flex auto relative vertical layout>
+                <div flex three auto relative>
+                    <div fit>
+                        <div relative style="height: 100%">
+                            <img src="{{image}}"
+                                 style="max-width: 100%;max-height: 100%;display: block;margin:0 auto">
+                        </div>
+                    </div>
+                </div>
+                <div flex horizontal layout center style="background:#4e9ee7">
+                    <div flex style="text-align: center">
+                        <span>test</span>
+                    </div>
+                    <!--<core-icon-button icon="forward" style="display: block" onclick="clickMe()"></core-icon-button>-->
+                </div>
+            </div>
+        </div>
+    </template>
+    <script>
+        Polymer( {
+            ready: function() {
+                console.log("ready");
+            },
+            color: "white",
+            width: 400,
+            height: 200,
+            borderColor: "#444444",
+            image: ""
+        });
+    </script>
+</polymer-element>
