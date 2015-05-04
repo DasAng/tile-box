@@ -3,7 +3,7 @@
 <link rel="import" href="../core-icons/core-icons.html">
 <link rel="import" href="../core-icon-button/core-icon-button.html">
 
-<polymer-element name="tile-box" attributes="color width height borderColor image titleText titleColor">
+<polymer-element name="tile-box" attributes="color width height borderColor image titleText titleColor titleBoxColor">
     <template>
         <style>
             :host {
@@ -21,7 +21,7 @@
                         </div>
                     </div>
                 </div>
-                <div flex horizontal layout center style="background:#4e9ee7">
+                <div flex horizontal layout center style="background:{{titleBoxColor}}">
                     <div flex style="text-align: center">
                         <span style="color: {{titleColor}}">{{titleText}}</span>
                     </div>
@@ -42,8 +42,8 @@
             image: "",
             titleText: "",
             titleColor: "black",
+            titleBoxColor: "#4e9ee7",
             onClick: function(event, detail, sender) {
-                console.log("Button clicked");
                 this.fire('open', {event: event, detail: detail, sender: sender});
             }
         });
