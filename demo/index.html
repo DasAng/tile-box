@@ -15,6 +15,11 @@
 
 <tile-box color="white" width="400" borderColor="#444444" image="docker.png" title="Container" titleColor="white"></tile-box>
 
-
+<script>
+    var e = document.querySelector('tile-box');
+    e.addEventListener('open', function(event) {
+        console.log(event);
+    });
+</script>
 </body>
 </html>
